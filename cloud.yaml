@@ -1,14 +1,9 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: Assignment 2 - Bizops by Nico
 
-Parameters:
-  AmiId:
-    Type:  'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
-    Default: '/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2'
 
 Resources:
   WebAppInstanceEC2:
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: t2.micro
-      ImageId: !Ref LatestAmiId
