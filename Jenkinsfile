@@ -1,9 +1,9 @@
 pipeline{
   agent any
   stages{
-    stage('Submit Stack'){
+    stage('Create Instance'){
       steps{
-        sh "aws cloudformation create-stack --stack-name s3bucket --template-body file://cloud.yml --region 'us-east-1'"
+        sh "aws cloudformation create-stack --stack-name nico-cloudformation --template-body file://cloud.yaml --region 'us-east-1'"
       }
     }
   }
